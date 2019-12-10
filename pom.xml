@@ -3,18 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.trxyy.launcherlib</groupId>
-	<artifactId>launcherlib</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<name>launcherlib</name>
+	<groupId>com.sunproject.sundev79.launcherlibrevo3.forked.trxyy.launcherlibrevo2</groupId>
+	<artifactId>launcherlibrevo3</artifactId>
+	<name>launcherlibrevo3</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -91,4 +84,5 @@
 			</plugin>
 		</plugins>
 	</build>
+	<version>0.3.0-BETA</version>
 </project>
