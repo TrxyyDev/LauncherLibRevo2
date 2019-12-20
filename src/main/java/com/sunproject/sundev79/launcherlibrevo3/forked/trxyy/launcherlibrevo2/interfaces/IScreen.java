@@ -36,6 +36,9 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.TextAlignment;
 import javafx.util.Duration;
 
+@SuppressWarnings("restriction")
+
+
 public class IScreen {
 	private static Rectangle downloadRect;
 	private static Label downloadPercentLabel;
@@ -90,13 +93,13 @@ public class IScreen {
 	    root.getChildren().add(backgroundImage);
 	}
 	
-	public static void drawAnimatedBackground(Pane root, String media) {
+	public static void drawAnimatedBackground(Pane root, String media, boolean soundEnabled) {
         MediaPlayer player = new MediaPlayer(resources.getMedia(media));
         MediaView viewer = new MediaView(player);
         viewer.setFitWidth(LauncherConstants.getWidth());
         viewer.setFitHeight(LauncherConstants.getHeight());
         player.setAutoPlay(true);
-        player.setMute(true);
+        player.setMute(soundEnabled);
         viewer.setPreserveRatio(false);
         player.setCycleCount(-1);
         player.play();
@@ -151,7 +154,7 @@ public class IScreen {
 		downloadFileLabel.setLayoutY(250);
 		contentPane.getChildren().add(downloadFileLabel);
 		
-		/** Screen not showed. */
+		 //Screen not showed.
 		Logger.write("Checking custom resources...");
         timeline = new Timeline(new KeyFrame(Duration.seconds(0), e -> downloadPercentLabel.setText("" + df2.format(gameUpdater.getProgressBar().getProgress() * 100) + "%")), new KeyFrame(Duration.seconds(0.1)));
         timeline.setCycleCount(Animation.INDEFINITE);

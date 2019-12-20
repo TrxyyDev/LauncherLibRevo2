@@ -1,8 +1,6 @@
 package com.sunproject.sundev79.launcherlibrevo3.forked.trxyy.launcherlibrevo2;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -35,16 +33,6 @@ public class LauncherConstants {
 		return gsonBuilder.create();
 	}
 
-	public static String loadJsonFromUrl(String baseUrl) throws IOException {
-		URL url = new URL(baseUrl);
-		BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-		String json = new String();
-		String inputLine;
-		while ((inputLine = in.readLine()) != null) {
-			json = json + inputLine;
-		}
-		return json;
-	}
 
 	public static URI constantURI(String input) {
 		try {
@@ -77,14 +65,6 @@ public class LauncherConstants {
 		}
 	}
 
-//	public static String getBaseUrl() {
-//		return baseUrl;
-//	}
-//
-//	public static void setBaseUrl(String czaz) {
-//		baseUrl = czaz;
-//	}
-	
 	public static String getResourceLocation() {
 		return resourceLocation;
 	}
